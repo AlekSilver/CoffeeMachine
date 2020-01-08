@@ -9,41 +9,45 @@
 import UIKit
 
 class Drink: NSObject {
-    var drinkName = ""
-    var drinkWater = 0
-    var drinkCoffee = 0
-    var drinkMilk = 0
+    var name = ""
+    var water = 0
+    var coffee = 0
+    var milk = 0
     
-    func espresso () -> (drinkName: String, drinkWater: Int, drinkCoffee: Int, drinkMilk: Int) {
-        drinkName = "Espresso"
-        drinkWater = 100
-        drinkCoffee = 1
-        drinkMilk = 0
-        return (drinkName, drinkWater, drinkCoffee, drinkMilk)
+    func espresso () -> Drink {
+        let drink = Drink()
+        drink.name = "Espresso"
+        drink.water = 100
+        drink.coffee = 1
+        drink.milk = 0
+        return drink
     }
     
-    func americano () -> (drinkName: String, drinkWater: Int, drinkCoffee: Int, drinkMilk: Int) {
-        drinkName = "Americano"
-        drinkWater = 200
-        drinkCoffee = 1
-        drinkMilk = 0
-        return (drinkName, drinkWater, drinkCoffee, drinkMilk)
+    func americano () -> Drink {
+        let drink = Drink()
+        drink.name = "Americano"
+        drink.water = 200
+        drink.coffee = 1
+        drink.milk = 0
+        return drink
     }
     
-    func americanoMilk () -> (drinkName: String, drinkWater: Int, drinkCoffee: Int, drinkMilk: Int) {
-        drinkName = "Americano with Milk"
-        drinkWater = 200
-        drinkCoffee = 1
-        drinkMilk = 50
-        return (drinkName, drinkWater, drinkCoffee, drinkMilk)
+    func americanoMilk () -> Drink {
+        let drink = Drink()
+        drink.name = "Americano with Milk"
+        drink.water = 200
+        drink.coffee = 1
+        drink.milk = 50
+        return drink
     }
     
-    func capuchino () -> (drinkName: String, drinkWater: Int, drinkCoffee: Int, drinkMilk: Int) {
-        drinkName = "Capuchino"
-        drinkWater = 100
-        drinkCoffee = 1
-        drinkMilk = 100
-        return (drinkName, drinkWater, drinkCoffee, drinkMilk)
+    func capuchino () -> Drink {
+        let drink = Drink()
+        drink.name = "Capuchino"
+        drink.water = 100
+        drink.coffee = 1
+        drink.milk = 100
+        return drink
     }
     
 }

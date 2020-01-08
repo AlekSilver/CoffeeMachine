@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     }
     
     let myCoffeeMachine = CoffeeMachine.init(water: 0, coffee: 0, milk: 0, tray: 0)
-    let myDrink = Drink()
+//    let myDrink = Drink()
     
     @IBAction func addWater(_ sender: UIButton) {
         displayLabel.text = myCoffeeMachine.addWater()
@@ -44,15 +44,19 @@ class ViewController: UIViewController {
         displayLabel.text = myCoffeeMachine.cleanTray()
     }
     @IBAction func makeEspresso(_ sender: UIButton) {
+        let myDrink = Drink()
         displayLabel.text = myCoffeeMachine.makeDrink(drink: myDrink.espresso())
     }
     @IBAction func makeAmericano(_ sender: UIButton) {
+        let myDrink = Drink()
         displayLabel.text = myCoffeeMachine.makeDrink(drink: myDrink.americano())
     }
     @IBAction func makeAmericanoMilk(_ sender: UIButton) {
+        let myDrink = Drink()
         displayLabel.text = myCoffeeMachine.makeDrink(drink: myDrink.americanoMilk())
     }
     @IBAction func makeCapuchino(_ sender: UIButton) {
+        let myDrink = Drink()
         displayLabel.text = myCoffeeMachine.makeDrink(drink: myDrink.capuchino())
     }
     
