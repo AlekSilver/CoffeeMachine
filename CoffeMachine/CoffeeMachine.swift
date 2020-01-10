@@ -33,20 +33,20 @@ class CoffeeMachine: NSObject {
     func makeDrink(drink: Drink) -> String {
         var result = ""
         if tray < trayLimit {
-            if water >= drink.water && coffee >= drink.coffee && milk >= drink.milk {
-                result = "Возьмите Ваш \(drink.name)"
-                print("Возьмите Ваш \(drink.name)")
-                water = water - drink.water
-                coffee = coffee - drink.coffee
-                milk = milk - drink.milk
+            if water >= Drink.water && coffee >= Drink.coffee && milk >= Drink.milk {
+                result = "Возьмите Ваш \(Drink.name)"
+                print("Возьмите Ваш \(Drink.name)")
+                water = water - Drink.water
+                coffee = coffee - Drink.coffee
+                milk = milk - Drink.milk
                 tray = tray + 1
-            } else if water < drink.water {
+            } else if water < Drink.water {
                 result = waterMes
                 print(waterMes)
-            } else if coffee < drink.coffee {
+            } else if coffee < Drink.coffee {
                 result = coffeeMes
                 print(coffeeMes)
-            } else if milk < drink.milk {
+            } else if milk < Drink.milk {
                 result = milkMes
                 print(milkMes)
             }

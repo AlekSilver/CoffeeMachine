@@ -14,9 +14,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var americanoButton: UIButton!
     @IBOutlet weak var americanoMilkButton: UIButton!
     @IBOutlet weak var capuchinoButton: UIButton!
+    @IBOutlet weak var machineImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        machineImage.image = UIImage(named: "coffeemachine")
         espressoButton.layer.masksToBounds = true
         espressoButton.layer.cornerRadius = 10
         americanoButton.layer.masksToBounds = true
@@ -29,7 +31,6 @@ class ViewController: UIViewController {
     }
     
     let myCoffeeMachine = CoffeeMachine.init(water: 0, coffee: 0, milk: 0, tray: 0)
-//    let myDrink = Drink()
     
     @IBAction func addWater(_ sender: UIButton) {
         displayLabel.text = myCoffeeMachine.addWater()
@@ -44,20 +45,16 @@ class ViewController: UIViewController {
         displayLabel.text = myCoffeeMachine.cleanTray()
     }
     @IBAction func makeEspresso(_ sender: UIButton) {
-        let myDrink = Drink()
-        displayLabel.text = myCoffeeMachine.makeDrink(drink: myDrink.espresso())
+        displayLabel.text = myCoffeeMachine.makeDrink(drink: Drink().espresso())
     }
     @IBAction func makeAmericano(_ sender: UIButton) {
-        let myDrink = Drink()
-        displayLabel.text = myCoffeeMachine.makeDrink(drink: myDrink.americano())
+        displayLabel.text = myCoffeeMachine.makeDrink(drink: Drink().americano())
     }
     @IBAction func makeAmericanoMilk(_ sender: UIButton) {
-        let myDrink = Drink()
-        displayLabel.text = myCoffeeMachine.makeDrink(drink: myDrink.americanoMilk())
+        displayLabel.text = myCoffeeMachine.makeDrink(drink: Drink().americanoMilk())
     }
     @IBAction func makeCapuchino(_ sender: UIButton) {
-        let myDrink = Drink()
-        displayLabel.text = myCoffeeMachine.makeDrink(drink: myDrink.capuchino())
+        displayLabel.text = myCoffeeMachine.makeDrink(drink: Drink().capuchino())
     }
     
 }

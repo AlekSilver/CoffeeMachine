@@ -9,45 +9,41 @@
 import UIKit
 
 class Drink: NSObject {
-    var name = ""
-    var water = 0
-    var coffee = 0
-    var milk = 0
+    static var name = ""
+    static var water = 0
+    static var coffee = 0
+    static var milk = 0
     
     func espresso () -> Drink {
-        let drink = Drink()
-        drink.name = "Espresso"
-        drink.water = 100
-        drink.coffee = 1
-        drink.milk = 0
-        return drink
+        Drink.name = "Espresso"
+        Drink.water = 100
+        Drink.coffee = 1
+        Drink.milk = 0
+        return Drink()
     }
     
     func americano () -> Drink {
-        let drink = Drink()
-        drink.name = "Americano"
-        drink.water = 200
-        drink.coffee = 1
-        drink.milk = 0
-        return drink
+        Drink.name = "Americano"
+        Drink.water = 200
+        Drink.coffee = 1
+        Drink.milk = 0
+        return Drink()
     }
     
     func americanoMilk () -> Drink {
-        let drink = Drink()
-        drink.name = "Americano with Milk"
-        drink.water = 200
-        drink.coffee = 1
-        drink.milk = 50
-        return drink
+        Drink.name = "Americano with Milk"
+        Drink.water = 200
+        Drink.coffee = 1
+        Drink.milk = 50
+        return Drink()
     }
     
     func capuchino () -> Drink {
-        let drink = Drink()
-        drink.name = "Capuchino"
-        drink.water = 100
-        drink.coffee = 1
-        drink.milk = 100
-        return drink
+        Drink.name = "Capuchino"
+        Drink.water = 100
+        Drink.coffee = 1
+        Drink.milk = 100
+        return Drink()
     }
     
 }
