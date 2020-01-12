@@ -45,16 +45,16 @@ class ViewController: UIViewController {
         displayLabel.text = myCoffeeMachine.cleanTray()
     }
     @IBAction func makeEspresso(_ sender: UIButton) {
-        displayLabel.text = myCoffeeMachine.makeDrink(drink: Drink().espresso())
+        displayLabel.text = myCoffeeMachine.makeDrink(drink: Drink.espresso())
     }
     @IBAction func makeAmericano(_ sender: UIButton) {
-        displayLabel.text = myCoffeeMachine.makeDrink(drink: Drink().americano())
+        displayLabel.text = myCoffeeMachine.makeDrink(drink: Drink.americano())
     }
     @IBAction func makeAmericanoMilk(_ sender: UIButton) {
-        displayLabel.text = myCoffeeMachine.makeDrink(drink: Drink().americanoMilk())
+        displayLabel.text = myCoffeeMachine.makeDrink(drink: Drink.americanoMilk())
     }
     @IBAction func makeCapuchino(_ sender: UIButton) {
-        displayLabel.text = myCoffeeMachine.makeDrink(drink: Drink().capuchino())
+        displayLabel.text = myCoffeeMachine.makeDrink(drink: Drink.capuchino())
     }
     
 }
