@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
     @IBOutlet weak var displayLabel: UILabel!
     @IBOutlet weak var espressoButton: UIButton!
     @IBOutlet weak var americanoButton: UIButton!
@@ -18,6 +19,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         machineImage.image = UIImage(named: "coffeemachine")
         espressoButton.layer.masksToBounds = true
         espressoButton.layer.cornerRadius = 10
@@ -32,18 +35,6 @@ class ViewController: UIViewController {
     
     let myCoffeeMachine = CoffeeMachine.init(water: 0, coffee: 0, milk: 0, tray: 0)
     
-    @IBAction func addWater(_ sender: UIButton) {
-        displayLabel.text = myCoffeeMachine.addWater()
-    }
-    @IBAction func addCoffee(_ sender: UIButton) {
-        displayLabel.text = myCoffeeMachine.addCoffee()
-    }
-    @IBAction func addMilk(_ sender: UIButton) {
-        displayLabel.text = myCoffeeMachine.addMilk()
-    }
-    @IBAction func cleanTray(_ sender: UIButton) {
-        displayLabel.text = myCoffeeMachine.cleanTray()
-    }
     @IBAction func makeEspresso(_ sender: UIButton) {
         displayLabel.text = myCoffeeMachine.makeDrink(drink: Drink.espresso())
     }
@@ -55,6 +46,9 @@ class ViewController: UIViewController {
     }
     @IBAction func makeCapuchino(_ sender: UIButton) {
         displayLabel.text = myCoffeeMachine.makeDrink(drink: Drink.capuchino())
+    }
+    @IBAction func makeService(_ sender: UIButton) {
+        performSegue(withIdentifier: "showService", sender: nil)
     }
     
 }

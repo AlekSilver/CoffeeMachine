@@ -24,15 +24,12 @@ class Drink: NSObject {
     static func espresso() -> Drink {
         return Drink(name: "Espresso", water: 100, coffee: 1, milk: 0)
     }
-    
     static func americano() -> Drink {
         return Drink(name: "Americano", water: 200, coffee: 1, milk: 0)
     }
-    
     static func americanoMilk() -> Drink {
         return Drink(name: "Americano with Milk", water: 200, coffee: 1, milk: 50)
     }
-    
     static func capuchino() -> Drink {
         return Drink(name: "Capuchino", water: 100, coffee: 1, milk: 100)
     }

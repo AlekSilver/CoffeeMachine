@@ -1,28 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dNx-rL-ThZ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="mnt-RX-NkG">
+            <objects>
+                <navigationController id="dNx-rL-ThZ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QIs-xo-jJF">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="O3C-T5-uGN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TAT-p6-Tq4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-633" y="130"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoffeMachine" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CoffeeMachine" id="BYZ-38-t0r" customClass="ViewController" customModule="CoffeMachine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X2u-kK-syL">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X2u-kK-syL">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXq-rn-LAq">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXq-rn-LAq">
                                 <rect key="frame" x="20" y="300" width="220" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="0l4-uP-H4Q"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="AMERICANO WITH MILK">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -31,10 +48,12 @@
                                     <action selector="makeAmericanoMilk:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M2f-Co-XGU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9W-NC-Gws">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9W-NC-Gws">
                                 <rect key="frame" x="20" y="222" width="220" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="Z1R-vh-l2D"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <state key="normal" title="ESPRESSO">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -43,9 +62,8 @@
                                     <action selector="makeEspresso:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uxq-hW-kxb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8h-42-3oK">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8h-42-3oK">
                                 <rect key="frame" x="248" y="300" width="146" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="CAPUCHINO">
@@ -55,9 +73,8 @@
                                     <action selector="makeCapuchino:" destination="BYZ-38-t0r" eventType="touchUpInside" id="53B-bC-d6f"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ry4-DL-roU">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ry4-DL-roU">
                                 <rect key="frame" x="248" y="222" width="146" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="AMERICANO">
@@ -67,57 +84,69 @@
                                     <action selector="makeAmericano:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w0g-9b-ImT"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="COFFEE MACHINE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BeO-Ra-YtA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COFFEE MACHINE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BeO-Ra-YtA">
                                 <rect key="frame" x="20" y="126" width="374" height="88"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="uFu-HB-DG8"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cuy-pv-7f6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cuy-pv-7f6">
                                 <rect key="frame" x="20" y="373" width="374" height="186"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.04232958865" green="1" blue="0.46115384139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="186" id="yiI-Qq-adC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFl-uc-YgW">
-                                <rect key="frame" x="36" y="567" width="130" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="WATER"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ist-2w-Zgo">
+                                <rect key="frame" x="115" y="814" width="184" height="30"/>
+                                <state key="normal" title="ОБСЛУЖИВАНИЕ"/>
                                 <connections>
-                                    <action selector="addWater:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eON-3y-4KQ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFa-CN-MPt">
-                                <rect key="frame" x="248" y="567" width="126" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="COFFEE"/>
-                                <connections>
-                                    <action selector="addCoffee:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OBq-0j-G9D"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJ8-g6-wGH">
-                                <rect key="frame" x="36" y="628" width="130" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="MILK"/>
-                                <connections>
-                                    <action selector="addMilk:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0ze-0V-eRe"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBo-qS-1Io">
-                                <rect key="frame" x="248" y="628" width="126" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="TRAY"/>
-                                <connections>
-                                    <action selector="cleanTray:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a3m-Gn-GeT"/>
+                                    <action selector="makeService:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n2j-oL-joZ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="NXq-rn-LAq" firstAttribute="top" secondItem="g8h-42-3oK" secondAttribute="top" id="0qg-oE-EK2"/>
+                            <constraint firstItem="BeO-Ra-YtA" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="40J-N2-iuQ"/>
+                            <constraint firstItem="G9W-NC-Gws" firstAttribute="top" secondItem="BeO-Ra-YtA" secondAttribute="bottom" constant="8" id="4Hg-Au-YAz"/>
+                            <constraint firstItem="X2u-kK-syL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5EB-NJ-xdE"/>
+                            <constraint firstItem="g8h-42-3oK" firstAttribute="trailing" secondItem="Cuy-pv-7f6" secondAttribute="trailing" id="6wj-te-aW4"/>
+                            <constraint firstItem="X2u-kK-syL" firstAttribute="centerX" secondItem="BeO-Ra-YtA" secondAttribute="centerX" id="9ie-wD-hi0"/>
+                            <constraint firstItem="ry4-DL-roU" firstAttribute="trailing" secondItem="g8h-42-3oK" secondAttribute="trailing" id="MY6-Cy-37W"/>
+                            <constraint firstItem="ry4-DL-roU" firstAttribute="leading" secondItem="G9W-NC-Gws" secondAttribute="trailing" constant="8" id="OOG-pO-ikj"/>
+                            <constraint firstItem="X2u-kK-syL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="S9w-Eg-tFM"/>
+                            <constraint firstItem="Cuy-pv-7f6" firstAttribute="centerX" secondItem="ist-2w-Zgo" secondAttribute="centerX" id="TXa-sP-Hge"/>
+                            <constraint firstItem="G9W-NC-Gws" firstAttribute="leading" secondItem="NXq-rn-LAq" secondAttribute="leading" id="b8z-MB-Vyq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ist-2w-Zgo" secondAttribute="bottom" constant="18" id="d4y-p8-Hjz"/>
+                            <constraint firstItem="BeO-Ra-YtA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="eVc-D6-4Lv"/>
+                            <constraint firstItem="BeO-Ra-YtA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="38" id="fdh-0R-yay"/>
+                            <constraint firstItem="ist-2w-Zgo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="115" id="h1X-3k-gcx"/>
+                            <constraint firstItem="X2u-kK-syL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-88" id="iI2-AA-xAh"/>
+                            <constraint firstItem="BeO-Ra-YtA" firstAttribute="trailing" secondItem="ry4-DL-roU" secondAttribute="trailing" id="itU-g9-CiB"/>
+                            <constraint firstItem="G9W-NC-Gws" firstAttribute="top" secondItem="ry4-DL-roU" secondAttribute="top" id="j2c-EE-bHw"/>
+                            <constraint firstItem="BeO-Ra-YtA" firstAttribute="leading" secondItem="G9W-NC-Gws" secondAttribute="leading" id="lKt-zV-J5f"/>
+                            <constraint firstItem="NXq-rn-LAq" firstAttribute="leading" secondItem="Cuy-pv-7f6" secondAttribute="leading" id="ljT-hV-9Py"/>
+                            <constraint firstItem="NXq-rn-LAq" firstAttribute="baseline" secondItem="g8h-42-3oK" secondAttribute="baseline" id="n0P-GN-mAI"/>
+                            <constraint firstItem="G9W-NC-Gws" firstAttribute="firstBaseline" secondItem="ry4-DL-roU" secondAttribute="firstBaseline" id="qVQ-Lf-RrP"/>
+                            <constraint firstItem="NXq-rn-LAq" firstAttribute="firstBaseline" secondItem="g8h-42-3oK" secondAttribute="firstBaseline" id="sPB-3D-Lkz"/>
+                            <constraint firstItem="ry4-DL-roU" firstAttribute="leading" secondItem="g8h-42-3oK" secondAttribute="leading" id="wjK-uK-Phg"/>
+                            <constraint firstItem="G9W-NC-Gws" firstAttribute="baseline" secondItem="ry4-DL-roU" secondAttribute="baseline" id="wvU-Ah-JBz"/>
+                            <constraint firstItem="NXq-rn-LAq" firstAttribute="top" secondItem="G9W-NC-Gws" secondAttribute="bottom" constant="25" id="yDb-SD-hJU"/>
+                            <constraint firstItem="Cuy-pv-7f6" firstAttribute="top" secondItem="NXq-rn-LAq" secondAttribute="bottom" constant="20" id="yPg-QP-2bc"/>
+                            <constraint firstItem="G9W-NC-Gws" firstAttribute="trailing" secondItem="NXq-rn-LAq" secondAttribute="trailing" id="zXf-ds-k3W"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fRf-0V-412">
+                        <barButtonItem key="backBarButtonItem" title="к использованию" id="aVR-bS-hMn"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="americanoButton" destination="ry4-DL-roU" id="aTF-2Y-qAe"/>
                         <outlet property="americanoMilkButton" destination="NXq-rn-LAq" id="aVl-eL-ENc"/>
@@ -125,11 +154,95 @@
                         <outlet property="displayLabel" destination="Cuy-pv-7f6" id="eMQ-s8-QjL"/>
                         <outlet property="espressoButton" destination="G9W-NC-Gws" id="Ue4-Wh-LEl"/>
                         <outlet property="machineImage" destination="X2u-kK-syL" id="kSn-ol-EFu"/>
+                        <segue destination="SO0-bG-g3i" kind="show" identifier="showService" id="7tA-ka-bzM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+        <!--Service View Controller-->
+        <scene sceneID="F7M-nk-Nce">
+            <objects>
+                <viewController id="SO0-bG-g3i" customClass="ServiceViewController" customModule="CoffeMachine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a0b-ff-i2b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ОБСЛУЖИВАНИЕ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fX-bw-veG">
+                                <rect key="frame" x="43" y="109" width="328" height="107"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlv-Oq-mou">
+                                <rect key="frame" x="38" y="239" width="130" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="pMz-vm-FKG"/>
+                                </constraints>
+                                <state key="normal" title="WATER"/>
+                                <connections>
+                                    <action selector="addWater:" destination="SO0-bG-g3i" eventType="touchUpInside" id="qA2-LG-NMv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVu-lX-kxN">
+                                <rect key="frame" x="250" y="239" width="126" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="126" id="SA7-tq-XzN"/>
+                                </constraints>
+                                <state key="normal" title="COFFEE"/>
+                                <connections>
+                                    <action selector="addCoffee:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OI7-UZ-JIR"/>
+                                    <action selector="addCoffee:" destination="SO0-bG-g3i" eventType="touchUpInside" id="WjT-TG-JK1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vW3-pu-wqg">
+                                <rect key="frame" x="38" y="300" width="130" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="rkg-OG-pvm"/>
+                                </constraints>
+                                <state key="normal" title="MILK"/>
+                                <connections>
+                                    <action selector="addMilk:" destination="SO0-bG-g3i" eventType="touchUpInside" id="LkA-eG-bAQ"/>
+                                    <action selector="addMilk:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MF1-rG-fAA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RR3-xg-efb">
+                                <rect key="frame" x="250" y="300" width="126" height="53"/>
+                                <state key="normal" title="TRAY"/>
+                                <connections>
+                                    <action selector="cleanTray:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LEd-1T-VUY"/>
+                                    <action selector="cleanTray:" destination="SO0-bG-g3i" eventType="touchUpInside" id="QFy-L3-v9E"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dlv-Oq-mou" firstAttribute="trailing" secondItem="vW3-pu-wqg" secondAttribute="trailing" id="0qQ-zA-tIL"/>
+                            <constraint firstItem="dlv-Oq-mou" firstAttribute="baseline" secondItem="bVu-lX-kxN" secondAttribute="firstBaseline" id="7tq-kJ-Fbc"/>
+                            <constraint firstItem="bVu-lX-kxN" firstAttribute="leading" secondItem="dlv-Oq-mou" secondAttribute="trailing" constant="82" id="B75-Pl-ieE"/>
+                            <constraint firstItem="vW3-pu-wqg" firstAttribute="top" secondItem="dlv-Oq-mou" secondAttribute="bottom" constant="8" id="Dm5-FM-fgY"/>
+                            <constraint firstItem="vW3-pu-wqg" firstAttribute="baseline" secondItem="RR3-xg-efb" secondAttribute="firstBaseline" id="FrQ-jO-dKS"/>
+                            <constraint firstItem="4fX-bw-veG" firstAttribute="leading" secondItem="ZXe-4n-wD4" secondAttribute="leading" constant="43" id="M5j-xn-GDJ"/>
+                            <constraint firstItem="dlv-Oq-mou" firstAttribute="leading" secondItem="vW3-pu-wqg" secondAttribute="leading" id="PHG-cg-rXy"/>
+                            <constraint firstItem="bVu-lX-kxN" firstAttribute="trailing" secondItem="RR3-xg-efb" secondAttribute="trailing" id="PXj-r1-JlR"/>
+                            <constraint firstItem="4fX-bw-veG" firstAttribute="centerX" secondItem="a0b-ff-i2b" secondAttribute="centerX" id="SfB-qL-iDC"/>
+                            <constraint firstItem="dlv-Oq-mou" firstAttribute="top" secondItem="bVu-lX-kxN" secondAttribute="top" id="fb0-iO-n3L"/>
+                            <constraint firstItem="dlv-Oq-mou" firstAttribute="top" secondItem="4fX-bw-veG" secondAttribute="bottom" constant="23" id="hIq-cx-wPA"/>
+                            <constraint firstItem="ZXe-4n-wD4" firstAttribute="bottom" secondItem="vW3-pu-wqg" secondAttribute="bottom" constant="509" id="hfx-nn-QEn"/>
+                            <constraint firstItem="bVu-lX-kxN" firstAttribute="leading" secondItem="RR3-xg-efb" secondAttribute="leading" id="hvT-lm-EeX"/>
+                            <constraint firstItem="dlv-Oq-mou" firstAttribute="leading" secondItem="ZXe-4n-wD4" secondAttribute="leading" constant="38" id="knX-es-Cvq"/>
+                            <constraint firstItem="4fX-bw-veG" firstAttribute="top" secondItem="ZXe-4n-wD4" secondAttribute="top" constant="21" id="sfK-b6-Gze"/>
+                            <constraint firstItem="vW3-pu-wqg" firstAttribute="top" secondItem="RR3-xg-efb" secondAttribute="top" id="tOO-fv-HKY"/>
+                            <constraint firstItem="ZXe-4n-wD4" firstAttribute="trailing" secondItem="bVu-lX-kxN" secondAttribute="trailing" constant="38" id="xGm-LI-gSc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZXe-4n-wD4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Z0g-w2-0hq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MjC-2D-b0v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="842.02898550724649" y="129.91071428571428"/>
         </scene>
     </scenes>
 </document>
