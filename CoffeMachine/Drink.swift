@@ -21,17 +21,26 @@ class Drink: NSObject {
         self.milk = milk
     }
     
-    static func espresso() -> Drink {
-        return Drink(name: "Espresso", water: 100, coffee: 1, milk: 0)
-    }
-    static func americano() -> Drink {
-        return Drink(name: "Americano", water: 200, coffee: 1, milk: 0)
-    }
-    static func americanoMilk() -> Drink {
-        return Drink(name: "Americano with Milk", water: 200, coffee: 1, milk: 50)
-    }
-    static func capuchino() -> Drink {
-        return Drink(name: "Capuchino", water: 100, coffee: 1, milk: 100)
+}
+
+enum EDrink {
+    case espresso
+    case americano
+    case americanoMilk
+    case capuchino
+    
+    var make: Drink {
+        switch self {
+        case .espresso:
+            return Drink(name: "Espresso", water: 100, coffee: 1, milk: 0)
+        case .americano:
+            return Drink(name: "Americano", water: 200, coffee: 1, milk: 0)
+        case .americanoMilk:
+            return Drink(name: "Americano with Milk", water: 200, coffee: 1, milk: 50)
+        case .capuchino:
+            return Drink(name: "Capuchino", water: 100, coffee: 1, milk: 100)
+        }
     }
     
 }
+

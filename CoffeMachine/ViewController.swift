@@ -41,16 +41,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func makeEspresso(_ sender: UIButton) {
-        displayLabel.text = myCoffeeMachine.makeDrink(drink: Drink.espresso())
+        displayLabel.text = myCoffeeMachine.makeDrink(drink: EDrink.espresso.make)
     }
     @IBAction func makeAmericano(_ sender: UIButton) {
-        displayLabel.text = myCoffeeMachine.makeDrink(drink: Drink.americano())
+        displayLabel.text = myCoffeeMachine.makeDrink(drink: EDrink.americano.make)
     }
     @IBAction func makeAmericanoMilk(_ sender: UIButton) {
-        displayLabel.text = myCoffeeMachine.makeDrink(drink: Drink.americanoMilk())
+        displayLabel.text = myCoffeeMachine.makeDrink(drink: EDrink.americanoMilk.make)
     }
     @IBAction func makeCapuchino(_ sender: UIButton) {
-        displayLabel.text = myCoffeeMachine.makeDrink(drink: Drink.capuchino())
+        displayLabel.text = myCoffeeMachine.makeDrink(drink: EDrink.capuchino.make)
     }
     @IBAction func makeService(_ sender: UIButton) {
         performSegue(withIdentifier: "showService", sender: nil)
