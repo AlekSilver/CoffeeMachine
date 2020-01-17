@@ -182,7 +182,7 @@
                                 </constraints>
                                 <state key="normal" title="WATER"/>
                                 <connections>
-                                    <action selector="addWater:" destination="SO0-bG-g3i" eventType="touchUpInside" id="qA2-LG-NMv"/>
+                                    <action selector="addWater:" destination="SO0-bG-g3i" eventType="touchUpInside" id="Hag-GO-CIY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVu-lX-kxN">
@@ -192,7 +192,6 @@
                                 </constraints>
                                 <state key="normal" title="COFFEE"/>
                                 <connections>
-                                    <action selector="addCoffee:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OI7-UZ-JIR"/>
                                     <action selector="addCoffee:" destination="SO0-bG-g3i" eventType="touchUpInside" id="WjT-TG-JK1"/>
                                 </connections>
                             </button>
@@ -204,14 +203,12 @@
                                 <state key="normal" title="MILK"/>
                                 <connections>
                                     <action selector="addMilk:" destination="SO0-bG-g3i" eventType="touchUpInside" id="LkA-eG-bAQ"/>
-                                    <action selector="addMilk:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MF1-rG-fAA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RR3-xg-efb">
                                 <rect key="frame" x="250" y="300" width="126" height="53"/>
                                 <state key="normal" title="TRAY"/>
                                 <connections>
-                                    <action selector="cleanTray:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LEd-1T-VUY"/>
                                     <action selector="cleanTray:" destination="SO0-bG-g3i" eventType="touchUpInside" id="QFy-L3-v9E"/>
                                 </connections>
                             </button>

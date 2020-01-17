@@ -35,6 +35,11 @@ class ViewController: UIViewController {
     
     let myCoffeeMachine = CoffeeMachine.init(water: 0, coffee: 0, milk: 0, tray: 0)
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let serviceVC = segue.destination as! ServiceViewController
+        serviceVC.myCoffeeMachine = myCoffeeMachine
+    }
+    
     @IBAction func makeEspresso(_ sender: UIButton) {
         displayLabel.text = myCoffeeMachine.makeDrink(drink: Drink.espresso())
     }
