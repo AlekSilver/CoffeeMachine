@@ -31,7 +31,7 @@ class CoffeeMachine: NSObject {
         self.tray = tray
     }
     
-    func makeDrink(drink: Drink) -> String {
+    func makeDrink(drink: (name: String, water: Int, coffee: Int, milk: Int)) -> String {
         var result = ""
         if tray < trayLimit {
             if water >= drink.water && coffee >= drink.coffee && milk >= drink.milk {
